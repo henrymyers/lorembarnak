@@ -2,7 +2,7 @@
   Lorembarnak
 </h1>
 <p align="center">
-  <strong>The Québecois swear generator</strong><br>
+  <strong>The Québécois swear generator</strong><br>
 </p>
 
 Ever need placeholder text for something that really pisses you off?<br>
@@ -17,4 +17,4 @@ No matter the reason for your need for obscenities, **Lorembarnak** has you cove
 3. Use `getText()` anywhere you need obscenities
 
 ## Contributing
-If you have any other swear suggestions or think a rule should be added, don't hesitate to open an issue or a pull request!
+If you have any juicy swear suggestions or think a rule should be added, don't hesitate to open an issue or a pull request!
