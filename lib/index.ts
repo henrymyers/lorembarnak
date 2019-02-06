@@ -11,7 +11,7 @@ const swears: string[] = [
     `de bâtard`,
     `de calvaire`,
     `de ciboire`,
-    `de mausus`,
+    `de mosus`,
     `de maudit`,
     `de sacrament`,
     `de viarge`,
@@ -24,7 +24,7 @@ const swears: string[] = [
     `de tabarouette`,
     `de taboire`,
     `de cibole`,
-    `d'enfant de chienne`,
+    `d'enfant d'chienne`,
     `de verrat`,
     `de marde`,
     `de maudite marde`,
@@ -62,7 +62,7 @@ const swears: string[] = [
  * @return {string}
  */
 export function getText(nbSwears?: number): string {
-    nbSwears = nbSwears || (randomInt(6) + 4);
+    nbSwears = nbSwears || (randomInt(8) + 6);
 
     let unused = [...swears];
     let result = "";

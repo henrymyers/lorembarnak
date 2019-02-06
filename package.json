@@ -1,18 +1,42 @@
 {
   "name": "lorembarnak",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "The Québécois swear generator",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "build": "tsc",
+    "build:gh": "npm run build && browserify ./docs/example.js -o ./docs/assets/bundle.js",
+    "start": "http-server ./docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Henry Myers <npm@henrymyers.com>",
-  "license": "ISC",
+  "pre-commit": [
+    "build:gh"
+  ],
+  "keywords": [
+    "lorem",
+    "ipsum",
+    "profanity",
+    "generator",
+    "placeholder",
+    "text",
+    "swear"
+  ],
+  "author": "Henry Myers <npm@henrymyers.com> (https://henrymyers.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/henrymyers/lorembarnak.git"
+  },
+  "bugs": {
+    "url": "https://github.com/henrymyers/lorembarnak/issues"
+  },
+  "homepage": "https://github.com/henrymyers/lorembarnak#readme",
   "devDependencies": {
+    "browserify": "^16.2.3",
+    "gh-pages": "^2.0.1",
+    "pre-commit": "^1.2.2",
     "typescript": "^3.2.4"
   }
 }
