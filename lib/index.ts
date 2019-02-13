@@ -54,6 +54,7 @@ const swears: string[] = [
     `de cul`,
     `de jésus marie joseph`,
     `d'esprit`,
+    `de charrue`,
 ];
 
 /**
