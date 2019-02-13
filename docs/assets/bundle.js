@@ -56,6 +56,7 @@ var swears = [
     "de cul",
     "de j\u00E9sus marie joseph",
     "d'esprit",
+    "de charrue",
 ];
 /**
  * Generates a chain of Québécois obscenities.
@@ -63,7 +64,7 @@ var swears = [
  * @return {string}
  */
 function getText(nbSwears) {
-    nbSwears = nbSwears || (randomInt(8) + 6);
+    nbSwears = nbSwears || (randomInt(8) + 8);
     var unused = swears.slice();
     var result = "";
     var previous = "";
@@ -82,7 +83,9 @@ function getText(nbSwears) {
         result += current + " ";
     }
     // Remove the 1st swear prefix and capitalize the 1st letter
-    return capitalize(result.replace(/^d[e']/, '').trim());
+    result = capitalize(result.replace(/^d[e']/, '').trim());
+    result += '.';
+    return result;
 }
 exports.getText = getText;
 function capitalize(str) {
@@ -98,17 +101,25 @@ let lorembarnak = require('../dist');
 function addLorem() {
     const elementsToFill = document.getElementsByClassName('lorem');
 
-    Array.from(elementsToFill).forEach((elem, i) => {
-        const nbSwears = elem.classList.contains('short') ? 8 : 15;
-        elem.textContent = `${i+1}. ${lorembarnak.getText(nbSwears)}`;
+    Array.from(elementsToFill).forEach((elem) => {
+        elem.textContent = lorembarnak.getText();
     });
 }
 
+function run() {
+    addLorem();
+
+    const refreshButton = document.getElementById('refreshButton');
+    if (refreshButton) {
+        refreshButton.onclick = addLorem;
+    }
+}
+
 if (window.addEventListener) {
-    window.addEventListener("load", addLorem, false);
+    window.addEventListener("load", run, false);
 } else if (window.attachEvent) {
-    window.attachEvent("onload", addLorem);
+    window.attachEvent("onload", run);
 } else {
-    window.onload = addLorem;
+    window.onload = run;
 }
 },{"../dist":1}]},{},[2]);

@@ -63,7 +63,7 @@ const swears: string[] = [
  * @return {string}
  */
 export function getText(nbSwears?: number): string {
-    nbSwears = nbSwears || (randomInt(8) + 6);
+    nbSwears = nbSwears || (randomInt(8) + 8);
 
     let unused = [...swears];
     let result = "";
@@ -88,7 +88,10 @@ export function getText(nbSwears?: number): string {
     }
 
     // Remove the 1st swear prefix and capitalize the 1st letter
-    return capitalize(result.replace(/^d[e']/, '').trim());
+    result = capitalize(result.replace(/^d[e']/, '').trim());
+    result += '.';
+
+    return result;
 }
 
 function capitalize(str: string): string {

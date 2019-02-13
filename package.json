@@ -1,6 +1,6 @@
 {
   "name": "lorembarnak",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The Québécois swear generator",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,6 @@
     "prepublishOnly": "npm run build",
     "build": "tsc",
     "build:gh": "npm run build && browserify ./docs/example.js -o ./docs/assets/bundle.js",
-    "start": "http-server ./docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "pre-commit": [

@@ -7,35 +7,35 @@ html, body {
 }
 body {
     background: url("./assets/bg.png");
-    font-family: "Courier New", serif;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 main {
-    max-width: 600px;
-    padding: 25px;
-}
-.subtitle {
+    max-width: 750px;
+    padding: 50px;
     text-align: center;
-    font-style: italic;
-}
-.title {
-    text-align: center;
-}
-.columns {
-    display: flex;
-    justify-content: space-between;
-}
-.column {
-    flex: 0 1 50%;
-}
-.spacer {
-    flex: 0 0 auto;
-    width: 1px;
-    margin: 0 25px;
-    background-color: black;
 }
 .lorem {
-    font-size: 14px;
+    font-size: 4vmax;
+    font-family: Georgia, Verdana, serif;
+    font-weight: bold;
+    margin: 30px 0;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon {
+    width: 7vmax;
+    height: 7vmax;
+}
+.clickable:hover {
+    cursor: pointer;
 }

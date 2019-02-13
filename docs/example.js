@@ -3,16 +3,24 @@ let lorembarnak = require('../dist');
 function addLorem() {
     const elementsToFill = document.getElementsByClassName('lorem');
 
-    Array.from(elementsToFill).forEach((elem, i) => {
-        const nbSwears = elem.classList.contains('short') ? 8 : 15;
-        elem.textContent = `${i+1}. ${lorembarnak.getText(nbSwears)}`;
+    Array.from(elementsToFill).forEach((elem) => {
+        elem.textContent = lorembarnak.getText();
     });
 }
 
+function run() {
+    addLorem();
+
+    const refreshButton = document.getElementById('refreshButton');
+    if (refreshButton) {
+        refreshButton.onclick = addLorem;
+    }
+}
+
 if (window.addEventListener) {
-    window.addEventListener("load", addLorem, false);
+    window.addEventListener("load", run, false);
 } else if (window.attachEvent) {
-    window.attachEvent("onload", addLorem);
+    window.attachEvent("onload", run);
 } else {
-    window.onload = addLorem;
+    window.onload = run;
 }
