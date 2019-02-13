@@ -12,12 +12,12 @@ body {
     align-items: center;
 }
 main {
-    max-width: 750px;
+    max-width: 800px;
     padding: 50px;
     text-align: center;
 }
 .lorem {
-    font-size: 4vmax;
+    font-size: 5vmin;
     font-family: Georgia, Verdana, serif;
     font-weight: bold;
     margin: 30px 0;
@@ -33,9 +33,10 @@ footer {
     align-items: center;
 }
 .icon {
-    width: 7vmax;
-    height: 7vmax;
+    width: 10vmin;
+    height: 6vmin;
 }
 .clickable:hover {
     cursor: pointer;
+    opacity: 0.8;
 }

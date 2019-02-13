@@ -8,9 +8,9 @@ Feel like polishing up your french?
 No matter the reason, **Lorembarnak** has you covered with a randomly generated chain of Québécois obscenities.
 
 ## Examples
-> Tabarnak de cul de jésus marie joseph de gériboire d'enfant d'chienne.
+> Crime de cul de viarge d'ostie de viande à chien de tabarnak.
 
-> Mautadit de patente à gosse de viarge d'esti de bout d'crisse de gériboire.
+> Mautadit de patente à gosse de jésus marie joseph d'esti de bout d'crisse de gériboire.
 
 > Torvisse de maudine de marde de saint-ciboire d'astie de sacrament de tabarslaque de crisse.
 
