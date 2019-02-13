@@ -34,7 +34,7 @@ footer {
 }
 .icon {
     width: 10vmin;
-    height: 6vmin;
+    height: 10vmin;
 }
 .clickable:hover {
     cursor: pointer;
