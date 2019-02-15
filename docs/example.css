@@ -6,37 +6,73 @@ html, body {
     margin: 0;
 }
 body {
-    background: url("./assets/bg.png");
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Verdana, serif;
+    background: #181f2b;
 }
 main {
     max-width: 800px;
     padding: 50px;
     text-align: center;
 }
-.lorem {
-    font-size: 5vmin;
-    font-family: Georgia, Verdana, serif;
-    font-weight: bold;
-    margin: 30px 0;
+
+.logo {
+    color: #3ac4af;
+    font-size: 12vmin;
 }
+.lorem {
+    margin: 30px 0;
+    font-size: 5vmin;
+    font-weight: bold;
+    color: ghostwhite;
+}
+
 footer {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+}
+.links {
+    position: relative;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #3ac4af;
+    overflow: hidden;
+}
+.link {
+    flex: 1 0 50%;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    font-size: 3vmin;
+    font-weight: bold;
+    color: #181f2b;
+    text-align: center;
+}
+.button {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 15px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    margin: 0 auto;
+    height: 13vmin;
+    width: 13vmin;
+    line-height: 13vmin;
+    font-size: 10vmin;
+    text-align: center;
+
+    background-color: #3ac4af;
+    color: #181f2b;
+    border: 10px solid #181f2b;
+    border-radius: 50%;
 }
-.icon {
-    width: 10vmin;
-    height: 10vmin;
-}
+
 .clickable:hover {
     cursor: pointer;
-    opacity: 0.8;
+    background-color: #1aa48f;
 }
