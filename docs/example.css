@@ -64,13 +64,14 @@ footer {
     background-color: var(--color-primary);
     overflow: hidden;
 }
-.link {
+.links a {
     flex: 1 0 50%;
     box-sizing: border-box;
     padding: 15px 20px;
     font-size: 3vmin;
     font-weight: bold;
     color: var(--color-bg);
+    text-decoration: none;
 }
 .button {
     position: relative;
