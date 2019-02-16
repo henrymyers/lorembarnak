@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/henrymyers/lorembarnak/issues"
   },
-  "homepage": "https://github.com/henrymyers/lorembarnak#readme",
+  "homepage": "https://henrymyers.github.io/lorembarnak/",
   "devDependencies": {
     "browserify": "^16.2.3",
     "gh-pages": "^2.0.1",
