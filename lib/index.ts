@@ -63,7 +63,7 @@ const swears: string[] = [
  * @return {string}
  */
 export function getText(nbSwears?: number): string {
-    nbSwears = nbSwears || (randomInt(8) + 8);
+    nbSwears = nbSwears || (randomInt(6) + 4);
 
     let unused = [...swears];
     let result = "";
