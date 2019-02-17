@@ -64,7 +64,7 @@ var swears = [
  * @return {string}
  */
 function getText(nbSwears) {
-    nbSwears = nbSwears || (randomInt(8) + 8);
+    nbSwears = nbSwears || (randomInt(6) + 4);
     var unused = swears.slice();
     var result = "";
     var previous = "";
