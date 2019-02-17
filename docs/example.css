@@ -19,7 +19,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    padding: 10vmin;
+    padding: 50px;
 
     font-family: Verdana, serif;
     text-align: center;
@@ -32,7 +32,7 @@ body > * {
 
 header {
     color: var(--color-primary);
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -89,4 +89,10 @@ footer {
 .clickable:hover {
     cursor: pointer;
     background-color: var(--color-primary-hover);
+}
+
+@media (max-width: 1024px) and (orientation : portrait) {
+    body {
+        padding: 10vmin;
+    }
 }
