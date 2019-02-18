@@ -1,97 +1,109 @@
+type swearVariants = Array<string>;
 
-const swears: string[] = [
-    `de calisse`,
-    `de tabarnak`,
-    `d'ostie`,
-    `de saint-ciboire`,
-    `de crisse`,
-    `de torrieux`,
-    `de cimonaque`,
-    `de batince`,
-    `de bâtard`,
-    `de calvaire`,
-    `de ciboire`,
-    `de mosus`,
-    `de maudit`,
-    `de sacrament`,
-    `de viarge`,
-    `de mautadit`,
-    `de saint-cimonaque`,
-    `de cibouleau`,
-    `de sacréfice`,
-    `de cibolac`,
-    `de tabarnouche`,
-    `de tabarouette`,
-    `de taboire`,
-    `de cibole`,
-    `d'enfant d'chienne`,
-    `de verrat`,
-    `de marde`,
-    `de maudite marde`,
-    `de sainte-viarge`,
-    `de tabarslaque`,
-    `de boswell`,
-    `de câlique`,
-    `de câline de bine`,
-    `de christie`,
-    `de câline`,
-    `de maudine`,
-    `de sacristi`,
-    `de sapristi`,
-    `de jésus de plâtre`,
-    `de torvisse`,
-    `de patente à gosse`,
-    `de viande à chien`,
-    `de bout d'crisse`,
-    `de crime`,
-    `d'astie`,
-    `de baptême`,
-    `de calvince`,
-    `d'estique`,
-    `de gériboire`,
-    `de bout d'viarge`,
-    `d'ostifie`,
-    `de cul`,
-    `de jésus marie joseph`,
-    `d'esprit`,
-    `de charrue`,
-];
+function getAllSwears(): Array<swearVariants> {
+    return [
+        [`tabarnak`, `tabarnouche`, `tabarouette`, `taboire`, `tabarslaque`],
+        [`câlisse`, `câlique`, `câline`, `câline de bine`, `câliboire`],
+        [`crisse`, `christie`, `crime`],
+        [`ostie`, `astie`, `estique`, `ostifie`, `esprit`],
+        [`ciboire`, `saint-ciboire`],
+        [`torrieux`],
+        [`cimonaque`, `saint-cimonaque`],
+        [`baptême`, `batince`],
+        [`bâtard`],
+        [`calvaire`, `calvince`],
+        [`mosus`],
+        [`maudit`, `mautadit`, `maudine`],
+        [`sacrament`],
+        [`viarge`, `sainte-viarge`, `bout d'viarge`],
+        [`cibouleau`],
+        [`sacréfice`],
+        [`cibole`, `cibolac`],
+        [`enfant d'chienne`],
+        [`verrat`],
+        [`marde`, `maudite marde`],
+        [`boswell`],
+        [`sacristi`, `sapristi`],
+        [`jésus de plâtre`],
+        [`torvisse`],
+        [`patente à gosse`],
+        [`viande à chien`],
+        [`bout d'crisse`],
+        [`cul`],
+        [`jésus marie joseph`],
+        [`charrue`],
+        [`charogne`],
+        [`gériboire`],
+    ];
+}
 
 /**
  * Generates a chain of Québécois obscenities.
- * @param {number} [nbSwears] Optional number of swears to chain
+ * @param {number} [nbRequested] Optional number of swears to chain
  * @return {string}
  */
-export function getText(nbSwears?: number): string {
-    nbSwears = nbSwears || (randomInt(6) + 4);
+export function getText(nbRequested?: number): string {
+    nbRequested = nbRequested || (randomInt(4) + 6);
 
-    let unused = [...swears];
+    let remaining = getAllSwears();
     let result = "";
-    let previous = "";
+    let previousSwear = "";
+    let previousIndex = null;
 
-    for (let i = 0; i < nbSwears; i++) {
+    for (let i = 0; i < nbRequested; i++) {
+        let family: swearVariants;
         let current: string;
+        let currentIndex;
 
-        // If we've run out of unused swears, reinitialize unused.
-        if (!unused.length) {
-            unused = [...swears];
+        // If we've run out of remaining swears, reinitialize remaining.
+        if (!remaining.length) {
+            remaining = getAllSwears();
         }
 
-        // Choose a random swear that isn't the previous one.
+        // Choose a random swear family that isn't the previous one.
         do {
-            current = unused.splice(randomInt(unused.length), 1)[0];
-        } while (current === previous);
+            currentIndex = randomInt(remaining.length);
+        } while (currentIndex === previousIndex || remaining[currentIndex].includes(previousSwear));
+        family = remaining[currentIndex];
+        previousIndex = currentIndex;
 
-        // Save the chosen swear and append it to the result.
-        previous = current;
-        result += `${current} `;
+        // Choose a random swear, and delete the family if empty.
+        current = family.splice(randomInt(family.length), 1)[0];
+        previousSwear = current;
+        if (!family.length) {
+            remaining.splice(currentIndex, 1);
+        }
+
+        // Capitalize the fist swear, add an article prefix to others.
+        result += (i === 0) ? capitalize(current) : withArticle(current);
+
+        // Add a period after the last swear, a space after others.
+        result += (i === nbRequested - 1) ? '.' : ' ';
     }
 
-    // Remove the 1st swear prefix and capitalize the 1st letter
-    result = capitalize(result.replace(/^d[e']/, '').trim());
-    result += '.';
-
     return result;
+}
+
+const startsWithPrefix = /^(de\s|d')/;
+const startsWithVowel = /^[aeiouhyAEIOUHYÀ-ÖØ-öø-ÿ]/;
+
+function withArticle(str: string): string {
+    let prefix: string;
+
+    if (startsWithPrefix.test(str)) {
+        // If it already starts with `de` or `d'`, don't add another.
+        prefix = '';
+
+    } else if (startsWithVowel.test(str)) {
+        // If it starts with a vowel, prepend with `d'`
+        prefix = `d'`;
+
+    } else {
+        // Otherwise prepend with `de`
+        prefix = 'de ';
+    }
+
+    return `${prefix}${str}`;
 }
 
 function capitalize(str: string): string {
