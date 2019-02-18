@@ -55,8 +55,8 @@ export function getText(nbRequested?: number): string {
         let current: string;
         let currentIndex;
 
-        // If we've run out of remaining swears, reinitialize remaining.
-        if (!remaining.length) {
+        // If we've run out of remaining swears or only the previous family remains, reinitialize remaining.
+        if (!remaining.length || (remaining.length === 1 && previousIndex !== null)) {
             remaining = getAllSwears();
         }
 
@@ -72,6 +72,7 @@ export function getText(nbRequested?: number): string {
         previousSwear = current;
         if (!family.length) {
             remaining.splice(currentIndex, 1);
+            previousIndex = null;
         }
 
         // Capitalize the fist swear, add an article prefix to others.

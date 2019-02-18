@@ -52,8 +52,8 @@ function getText(nbRequested) {
         var family = void 0;
         var current = void 0;
         var currentIndex = void 0;
-        // If we've run out of remaining swears, reinitialize remaining.
-        if (!remaining.length) {
+        // If we've run out of remaining swears or only the previous family remains, reinitialize remaining.
+        if (!remaining.length || (remaining.length === 1 && previousIndex !== null)) {
             remaining = getAllSwears();
         }
         // Choose a random swear family that isn't the previous one.
@@ -67,6 +67,7 @@ function getText(nbRequested) {
         previousSwear = current;
         if (!family.length) {
             remaining.splice(currentIndex, 1);
+            previousIndex = null;
         }
         // Capitalize the fist swear, add an article prefix to others.
         result += (i === 0) ? capitalize(current) : withArticle(current);
@@ -119,6 +120,9 @@ function run() {
     if (refreshButton) {
         refreshButton.onclick = addLorem;
     }
+
+    // Add it to the window so people can test it
+    window.getText = lorembarnak.getText;
 }
 
 if (window.addEventListener) {

@@ -15,6 +15,9 @@ function run() {
     if (refreshButton) {
         refreshButton.onclick = addLorem;
     }
+
+    // Add it to the window so people can test it
+    window.getText = lorembarnak.getText;
 }
 
 if (window.addEventListener) {
