@@ -7,12 +7,8 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "tsc",
-    "build:gh": "npm run build && browserify ./docs/example.js -o ./docs/assets/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "pre-commit": [
-    "build:gh"
-  ],
   "keywords": [
     "lorem",
     "ipsum",
@@ -34,7 +30,6 @@
   "homepage": "https://lorembarnak.com",
   "devDependencies": {
     "browserify": "^16.2.3",
-    "gh-pages": "^2.0.1",
     "pre-commit": "^1.2.2",
     "typescript": "^3.2.4"
   }
