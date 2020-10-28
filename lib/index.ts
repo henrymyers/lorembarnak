@@ -14,7 +14,7 @@ function getAllSwears(): Array<swearVariants> {
         [`calvaire`, `calvince`],
         [`mosus`],
         [`maudit`, `mautadit`, `maudine`],
-        [`sacrament`],
+        [`sacrament`, `saint-sacrament`],
         [`viarge`, `sainte-viarge`, `bout d'viarge`],
         [`cibouleau`],
         [`sacréfice`],
