@@ -21,7 +21,7 @@ function getAllSwears(): Array<swearVariants> {
         [`cibole`, `cibolac`],
         [`enfant d'chienne`],
         [`verrat`],
-        [`marde`, `maudite marde`],
+        [`marde`, `maudite marde`, `mange-marde`],
         [`boswell`],
         [`sacristi`, `sapristi`],
         [`jésus de plâtre`],
