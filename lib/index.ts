@@ -3,7 +3,7 @@ type swearVariants = Array<string>;
 function getAllSwears(): Array<swearVariants> {
     return [
         [`tabarnak`, `tabarnouche`, `tabarouette`, `taboire`, `tabarslaque`],
-        [`câlisse`, `câlique`, `câline`, `câline de bine`, `câliboire`],
+        [`câlisse`, `câlique`, `câline`, `câline de bine`, `câliboire`, `caltor`],
         [`crisse`, `christie`, `crime`],
         [`ostie`, `astie`, `estique`, `ostifie`, `esprit`],
         [`ciboire`, `saint-ciboire`],
