@@ -28,7 +28,6 @@ function getAllSwears(): Array<swearVariants> {
         [`torvisse`],
         [`patente à gosse`],
         [`viande à chien`],
-        [`bout d'crisse`],
         [`cul`],
         [`jésus marie joseph`],
         [`charrue`],
