@@ -4,7 +4,7 @@ function getAllSwears(): Array<swearVariants> {
     return [
         [`tabarnak`, `tabarnouche`, `tabarouette`, `taboire`, `tabarslaque`, `tabarnane`],
         [`câlisse`, `câlique`, `câline`, `câline de bine`, `câliboire`, `caltor`],
-        [`crisse`, `christie`, `crime`],
+        [`crisse`, `christie`, `crime`, `bout d'crisse`],
         [`ostie`, `astie`, `estique`, `ostifie`, `esprit`],
         [`ciboire`, `saint-ciboire`],
         [`torrieux`, `torvisse`],
@@ -28,7 +28,6 @@ function getAllSwears(): Array<swearVariants> {
         [`crucifix`],
         [`patente à gosse`, `cochonnerie`, `cossin`],
         [`viande à chien`],
-        [`bout d'crisse`],
         [`cul`],
         [`purée`],
         [`étole`],
