@@ -34,6 +34,7 @@ function getAllSwears(): Array<swearVariants> {
         [`charrue`],
         [`charogne`],
         [`gériboire`],
+        [`doux jésus`],
     ];
 }
 
