@@ -34,7 +34,7 @@ function getAllSwears(): Array<swearVariants> {
         [`charrue`],
         [`charogne`],
         [`gériboire`],
-        [`colon`, `gros colon`],
+        [`colon`],
     ];
 }
 
