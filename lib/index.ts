@@ -29,7 +29,7 @@ function getAllSwears(): Array<swearVariants> {
         [`patente à gosse`, `cochonnerie`, `cossin`],
         [`viande à chien`],
         [`bout d'crisse`],
-        [`cul`, `sainte-fesse`],
+        [`cul`, `saintes-fesses`],
         [`purée`],
         [`étole`],
         [`charogne`, `charrue`],
