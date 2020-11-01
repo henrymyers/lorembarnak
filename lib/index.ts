@@ -24,7 +24,7 @@ function getAllSwears(): Array<swearVariants> {
         [`marde`, `maudite marde`, `mangeux d'marde`],
         [`boswell`],
         [`sacristi`, `sapristi`],
-        [`Jésus de plâtre`, `Jésus Marie Joseph`, `p'tit Jésus`],
+        [`Jésus de plâtre`, `Jésus Marie Joseph`, `p'tit Jésus`, `doux Jésus`],
         [`crucifix`],
         [`patente à gosse`, `cochonnerie`, `cossin`],
         [`viande à chien`],
