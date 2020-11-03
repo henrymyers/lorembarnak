@@ -4,7 +4,7 @@ function getAllSwears(): Array<swearVariants> {
     return [
         [`tabarnak`, `tabarnouche`, `tabarouette`, `taboire`, `tabarslaque`, `tabarnane`],
         [`câlisse`, `câlique`, `câline`, `câline de bine`, `câliboire`, `caltor`],
-        [`crisse`, `christie`, `crime`],
+        [`crisse`, `christie`, `crime`, `bout d'crisse`],
         [`ostie`, `astie`, `estique`, `ostifie`, `esprit`],
         [`ciboire`, `saint-ciboire`],
         [`torrieux`, `torvisse`],
@@ -24,16 +24,16 @@ function getAllSwears(): Array<swearVariants> {
         [`marde`, `maudite marde`, `mangeux d'marde`],
         [`boswell`],
         [`sacristi`, `sapristi`],
-        [`Jésus de plâtre`, `Jésus Marie Joseph`, `p'tit Jésus`],
+        [`Jésus de plâtre`, `Jésus Marie Joseph`, `p'tit Jésus`, `doux Jésus`],
         [`crucifix`],
         [`patente à gosse`, `cochonnerie`, `cossin`],
         [`viande à chien`],
-        [`bout d'crisse`],
         [`cul`, `saintes fesses`],
         [`purée`],
         [`étole`],
         [`charogne`, `charrue`],
         [`gériboire`, `géritole`],
+        [`colon`],
     ];
 }
 
