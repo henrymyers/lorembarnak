@@ -10,11 +10,11 @@ See it in action on [the demo site](https://lorembarnak.com/en).
 
 ## Examples
 
-> Crime de cul de viarge d'ostie de viande à chien de tabarnak.
+> Crime de cul de viarge d’ostie de viande à chien de tabarnak.
 
-> Mautadit de patente à gosse de jésus marie joseph d'esti de bout d'crisse de gériboire.
+> Mautadit de patente à gosse de jésus marie joseph d’esti de bout d’crisse de gériboire.
 
-> Torvisse de maudine de marde de saint-ciboire d'astie de sacrament de tabarslaque de crisse.
+> Torvisse de maudine de marde de saint-ciboire d’astie de sacrament de tabarslaque de crisse.
 
 ## Usage
 
