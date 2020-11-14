@@ -4,7 +4,7 @@ function getAllSwears(): Array<swearVariants> {
     return [
         [`tabarnak`, `tabarnouche`, `tabarouette`, `taboire`, `tabarslaque`, `tabarnane`],
         [`câlisse`, `câlique`, `câline`, `câline de bine`, `câliboire`, `caltor`],
-        [`crisse`, `christie`, `crime`, `bout d'crisse`],
+        [`crisse`, `christie`, `crime`, `bout d’crisse`],
         [`ostie`, `astie`, `estique`, `ostifie`, `esprit`],
         [`ciboire`, `saint-ciboire`],
         [`torrieux`, `torvisse`],
@@ -15,16 +15,16 @@ function getAllSwears(): Array<swearVariants> {
         [`mosus`],
         [`maudit`, `mautadit`, `maudine`, `mautadine`],
         [`sacrament`, `sacréfice`, `saint-sacrament`],
-        [`viarge`, `sainte-viarge`, `bout d'viarge`],
-        [`ciarge`, `saint-ciarge`, `bout d'ciarge`],
+        [`viarge`, `sainte-viarge`, `bout d’viarge`],
+        [`ciarge`, `saint-ciarge`, `bout d’ciarge`],
         [`cibouleau`],
         [`cibole`, `cibolac`],
-        [`enfant d'chienne`],
+        [`enfant d’chienne`],
         [`verrat`],
-        [`marde`, `maudite marde`, `mangeux d'marde`],
+        [`marde`, `maudite marde`, `mangeux d’marde`],
         [`boswell`],
         [`sacristi`, `sapristi`],
-        [`Jésus de plâtre`, `Jésus Marie Joseph`, `p'tit Jésus`, `doux Jésus`],
+        [`Jésus de plâtre`, `Jésus Marie Joseph`, `p’tit Jésus`, `doux Jésus`],
         [`crucifix`],
         [`patente à gosse`, `cochonnerie`, `cossin`],
         [`viande à chien`],
@@ -85,19 +85,19 @@ export function getText(nbRequested?: number): string {
     return result;
 }
 
-const startsWithPrefix = /^(de\s|d')/;
+const startsWithPrefix = /^(de\s|d’)/;
 const startsWithVowel = /^[aeiouhyAEIOUHYÀ-ÖØ-öø-ÿ]/;
 
 function withArticle(str: string): string {
     let prefix: string;
 
     if (startsWithPrefix.test(str)) {
-        // If it already starts with `de` or `d'`, don't add another.
+        // If it already starts with `de` or `d’`, don't add another.
         prefix = '';
 
     } else if (startsWithVowel.test(str)) {
         // If it starts with a vowel, prepend with `d'`
-        prefix = `d'`;
+        prefix = `d’`;
 
     } else {
         // Otherwise prepend with `de`
