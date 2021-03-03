@@ -28,6 +28,10 @@ const randomLength = getText();
 const specificLength = getText(10);
 ```
 
+## Visual Studio Code extension
+A visual studio code extension was created. This extension can insert text generated with this lib in your files.
+To install the extension please read the [README](https://github.com/hecht-a/vscode-lorem-barnak/blob/master/README.md) or go to the [vscode marketplace](https://marketplace.visualstudio.com/items?itemName=HECHTAxel.lorem-barnak).
+
 ## Contributing
 
 If you have any juicy swear suggestions or think a rule should be added, don't hesitate to open an issue or a pull request!
